@@ -1,0 +1,55 @@
+{
+    "header": {
+        "home": "Home",
+        "showcase": "Showcase"
+    },
+    "hero": {
+        "greeting": "Hi! My name is",
+        "description": "Passionate about programming and creating websites. Privately, a gym enthusiast, traveler, concert-goer, as well as a gamer and game developer."
+    },
+    "about": {
+        "title": "My Skills",
+        "description": "I have been involved in programming from a young age, initially creating game modifications, and then trying my hand at developing my own games. Over time, I found my place in creating websites and web applications, working both on the frontend and backend, most often using a combination of Vue and Laravel. The above-listed technologies and tools are those I work with most frequently, but they are not the only ones I have had the opportunity to learn throughout my programming history."
+    },
+    "projects": {
+        "title": "My Projects",
+        "check-details": "Check details",
+        "information-part-one": "Only some of my projects have been showcased above.",
+        "information-part-two": "All projects can be found in the section",
+        "dreamspeak": {
+            "title": "Dream-Speak.pl",
+            "subtitle": "Community Website",
+            "description": "DreamSpeak is a dedicated website for users utilizing DreamSpeak services, serving as both a business card and a contact platform for users."
+        },
+        "admanager": {
+            "title": "AdManager",
+            "subtitle": "Ad Management System",
+            "description": "AdManager is a comprehensive ad management system that allows users to create, manage, and monitor advertising campaigns. The system offers features for creating and editing ads, tracking their effectiveness, managing invoices, and more."
+        },
+        "bargify": {
+            "title": "Bargify",
+            "subtitle": "Price Tracking Application",
+            "description": "Bargify is an application that enables users to track prices and availability of specified products from supported online stores."
+        },
+        "gymtracker": {
+            "title": "GymTracker",
+            "subtitle": "Workout Application",
+            "description": "GymTracker is an application for tracking workouts and progress in fitness at the gym. It allows users to log training sessions, monitor progress, create workout plans, and more."
+        },
+        "dreamfork": {
+            "title": "DreamFork",
+            "subtitle": "PHP Framework",
+            "description": "DreamFork is a lightweight PHP framework inspired by Laravel, dedicated to creating web applications. This framework was designed with performance and a small footprint in mind."
+        },
+        "krosno24": {
+            "title": "Krosno24.pl",
+            "subtitle": "Local News Portal",
+            "description": "This project was not written by me from scratch, but I took over its maintenance, focusing on its further development, optimization, and expanding its functionality."
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "I am open to proposals for both projects and full-time employment.",
+        "localization": "Location"
+    }
+}

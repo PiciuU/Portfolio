@@ -1,0 +1,55 @@
+{
+    "header": {
+        "home": "Home",
+        "showcase": "Showcase"
+    },
+    "hero": {
+        "greeting": "Cześć! Nazywam się",
+        "description": "Z pasji - programista tworzący strony internetowe. Prywatnie entuzjasta siłowni, lubiący podróże i koncerty, a także gracz i twórca gier."
+    },
+    "about": {
+        "title": "Moje umiejętności",
+        "description": "Z programowaniem miałem styczność od młodych lat, początkowo tworząc modyfikacje do gier, a następnie próbując swoich sił w tworzeniu własnych gier. Z czasem odnalazłem się w tworzeniu stron internetowych i aplikacji webowych, zarówno na frontendzie, jak i na backendzie, najczęściej sięgając po połączenie Vue i Laravel. Powyżej przedstawione technologie oraz narzędzia są tymi, z którymi pracuję najczęściej, ale nie są jedynymi, które miałem okazję poznać w swojej historii programowania."
+    },
+    "projects": {
+        "title": "Moje projekty",
+        "check-details": "Sprawdź szczegóły",
+        "information-part-one": "Powyżej przedstawione zostały tylko niektóre z moich realizacji.",
+        "information-part-two": "Wszystkie projekty można odnaleźć w sekcji",
+        "dreamspeak": {
+            "title": "Dream-Speak.pl",
+            "subtitle": "Strona dla społeczności",
+            "description": "DreamSpeak to dedykowana strona dla użytkowników korzystających z usług DreamSpeak, pełniąca rolę wizytówki oraz platformy kontaktowej dla użytkowników."
+        },
+        "admanager": {
+            "title": "AdManager",
+            "subtitle": "System zarządzania reklamami",
+            "description": "AdManager to kompleksowy system zarządzania reklamami, który umożliwia użytkownikom tworzenie, zarządzanie i monitorowanie kampanii reklamowych. System oferuje funkcje tworzenia i edycji reklam, śledzenia ich efektywności, zarządzania fakturami i wiele więcej."
+        },
+        "bargify": {
+            "title": "Bargify",
+            "subtitle": "Aplikacja śledząca ceny",
+            "description": "Bargify to aplikacja umożliwiająca śledzenie cen oraz dostępności produktów określonch przez użytkownika z obsługiwanych sklepów internetowych."
+        },
+        "gymtracker": {
+            "title": "Gymtracker",
+            "subtitle": "Aplikacja treningowa",
+            "description": "GymTracker to aplikacja do śledzenia treningów i postępów w fitnessie na siłowni. Umożliwia użytkownikom rejestrowanie sesji treningowych, monitorowanie postępów, tworzenie planów treningowych i wiele więcej."
+        },
+        "dreamfork": {
+            "title": "DreamFork",
+            "subtitle": "PHP Framework",
+            "description": "Dreamfork to lekki framework dla języka PHP inspirowany Laravelem, dedykowany do tworzenia aplikacji internetowych. Framework ten został stworzony z myślą o wydajności i niewielkim rozmiarze."
+        },
+        "krosno24": {
+            "title": "Krosno24.pl",
+            "subtitle": "Portal informacyjny",
+            "description": "Projekt nie został przeze mnie napisany od podstaw, natomiast przejąłem nad nim opiekę, koncentrując się na jego dalszym rozwoju, optymalizacji i rozszerzaniu funkcjonalności."
+        }
+    },
+    "contact": {
+        "title": "Kontakt",
+        "description": "Jestem otwarty na propozycje dotyczące zarówno projektów, jak i stałego zatrudnienia.",
+        "localization": "Lokalizacja"
+    }
+}

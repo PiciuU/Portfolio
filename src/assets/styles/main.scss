@@ -35,14 +35,3 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
-
-#app {
-    display: flex;
-    min-height: 100%;
-}
-
-main {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-}
