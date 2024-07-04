@@ -4,7 +4,7 @@
             <div class="contact__divider-top"></div>
             <div class="contact__divider-bottom"></div>
         </div>
-        <div class="contact__container container">
+        <div class="contact__container responsive-container">
             <div class="contact__heading">
                 <h3 :data-text="$t('contact.title')">{{ $t('contact.title') }}</h3>
                 <h4>{{ $t('contact.description') }}</h4>
@@ -13,7 +13,7 @@
                 <div class="contact__items">
                     <div class="contact__item">
                         <div class="contact__icon">
-                            <icon name="house-solid" />
+                            <icon name="house" />
                         </div>
                         <div class="contact__text">
                             <h4>{{ $t('contact.localization') }}</h4>
@@ -22,7 +22,7 @@
                     </div>
                     <div class="contact__item">
                         <div class="contact__icon">
-                            <icon name="envelope-solid" />
+                            <icon name="envelope" />
                         </div>
                         <div class="contact__text">
                             <h4>Email</h4>
@@ -69,8 +69,6 @@
 
     &__container {
         overflow: hidden;
-        padding: 40px;
-        width: 100%;
     }
 
     &__heading {

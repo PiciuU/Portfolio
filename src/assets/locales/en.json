@@ -16,35 +16,88 @@
         "check-details": "Check details",
         "information-part-one": "Only some of my projects have been showcased above.",
         "information-part-two": "All projects can be found in the section",
-        "dreamspeak": {
-            "title": "Dream-Speak.pl",
-            "subtitle": "Community Website",
-            "description": "DreamSpeak is a dedicated website for users utilizing DreamSpeak services, serving as both a business card and a contact platform for users."
+        "categories": {
+            "websites": "Websites",
+            "games": "Games",
+            "other": "Other"
         },
-        "admanager": {
-            "title": "AdManager",
-            "subtitle": "Ad Management System",
-            "description": "AdManager is a comprehensive ad management system that allows users to create, manage, and monitor advertising campaigns. The system offers features for creating and editing ads, tracking their effectiveness, managing invoices, and more."
+        "website": {
+            "dreamspeak": {
+                "title": "Dream-Speak.pl",
+                "subtitle": "Community Website",
+                "introduction": "DreamSpeak is a dedicated website for users utilizing DreamSpeak services, serving as both a business card and a contact platform for users.",
+                "description": "DreamSpeak was my first major project, which allowed me to gain valuable experience with the Linux system and managing services such as hosting, VPS servers, and domains. As a result, my skills extend beyond just creating websites to include their proper deployment, selecting appropriate hosting providers, servers, and domain registrars. One of the outcomes of this project is the official DreamSpeak website, which serves as an information hub for all users of our services. I developed it as a business card, adding special modules such as DreamDesk, which allows users to contact administrators directly for various purposes and access documentation. The site also supported a forum for a long time, which was eventually closed. A key feature is the DreamEngine module, where I used a library that allows direct communication between the website and the TeamSpeak3 voice communicator. This makes it possible for users to manage their accounts from the browser without needing to be active on the communicator. At the time of creating this module, DreamSpeak was one of the few Polish TeamSpeak3 servers offering such functionality, providing a range of automations and improvements for users."
+            },
+            "manager": {
+                "title": "AdManager",
+                "subtitle": "Ad Management System",
+                "introduction": "AdManager is a comprehensive ad management system that allows users to create, manage, and monitor advertising campaigns. The system offers features for creating and editing ads, tracking their effectiveness, managing invoices, and more.",
+                "description": "AdManager was a project executed by a three-person team, built using Vue and Laravel. The goal of the project was to create an advertising management system that could be utilized by external companies. The system offers numerous functionalities related to managing user advertisements. Users can add new advertising campaigns, typically paying for the selected duration of the campaign. They can then track their advertisement statistics, which are recorded by the company using the system. A key element of the project was developing a robust administrative panel, integrated into the system. This allows administrators to access admin tabs where they can manage advertisements and users, as well as view an event log that records every action performed within the system. In this project, I served as the project leader. I was responsible for synchronizing the team's work, correctly merging and integrating updates, writing and refining code, and conducting code reviews. I also acted as a mentor, introducing other team members to Vue and Laravel, explaining the concepts of these frameworks in an understandable manner. This project allowed me to enhance my soft skills in collaborating with other developers."
+            },
+            "bargify": {
+                "title": "Bargify",
+                "subtitle": "Price Tracking Application",
+                "introduction": "Bargify is an application that enables users to track prices and availability of specified products from supported online stores.",
+                "description": "Bargify is an application crafted using Vue for the user interface and the DreamFork framework for the API interface. Its primary function is to enable users to track the prices and availability of products from supported online stores. The application operates through web scraping: when a user adds a product to their list, Bargify attempts to match it with existing entries in the database to minimize redundant actions. If no match is found, the product is scraped from the online store. Subsequently, at regular intervals, the application updates product information. When a product meets the user's conditions, such as a maximum price, the user receives a web push notification. Users can easily add, edit, and delete products as well as manage notification settings, making Bargify a highly intuitive tool."
+            },
+            "gymtracker": {
+                "title": "GymTracker",
+                "subtitle": "Workout Application",
+                "introduction": "GymTracker is an application for tracking workouts and progress in fitness at the gym. It allows users to log training sessions, monitor progress, create workout plans, and more.",
+                "description": "GymTracker was created using a combination of Vue and Laravel. The project's goal was to develop an intuitive application that allows users to plan their workouts and track their progress. A crucial aspect of the project was designing and implementing a data structure that enables exercises added to the application to be shared among users. This way, every user can enrich the application's resources by adding their exercises to the public catalog or their private one. Users can create their own workout plans for specific days, track their progress in achieving maximum results, and use calculators to determine their caloric needs or BMI. GymTracker provides comprehensive support for individuals looking to organize and monitor their workouts."
+            },
+            "dreamfork": {
+                "title": "DreamFork",
+                "subtitle": "PHP Framework",
+                "introduction": "DreamFork is a lightweight PHP framework inspired by Laravel, dedicated to creating web applications. This framework was designed with performance and a small footprint in mind.",
+                "description": "DreamFork is my attempt to create a custom framework for PHP, inspired by Laravel, which I frequently use in my projects. As a result, DreamFork contains many similarities to Laravel, allowing developers familiar with Laravel to quickly adapt to DreamFork. This framework is characterized by its small size and speed, making it ideal for developing simple web applications and APIs. Despite its compact size, DreamFork offers a range of essential features necessary for modern development. The framework is equipped with comprehensive documentation that details every aspect of its functionality, and its open-source code allows developers to customize the framework to their specific needs. DreamFork was also a key component of my engineering thesis, ensuring that its development was carefully supervised. Working on this project has allowed me to understand how to create comprehensive, scalable solutions that are easy to develop and maintain."
+            },
+            "krosno24": {
+                "title": "Krosno24.pl",
+                "subtitle": "Local News Portal",
+                "introduction": "Krosno24.pl is a local news portal dedicated to the residents of Krosno and the surrounding areas. The portal focuses on providing the latest news, announcements, and information about upcoming events, making it the perfect place to stay updated on what's happening in Krosno.",
+                "description": "This project was not written by me from scratch, but I took over its maintenance, focusing on its further development, optimization, and expanding its functionality. As the main and sole developer, I have been, and continue to be, responsible for the entire process of developing the portal, which includes writing code, ensuring its security, conducting appropriate tests, and deploying updates. I have made numerous improvements related to the portal's performance, optimizing both database structures and tables, as well as the portal's code, introducing many updates and optimizations. I have implemented many new features, such as Alert sections, web push notifications, account settings, and revamped sections like Discussions, Hotline, and many others. I have also enhanced the custom CMS panel created by the previous developer, adding a range of improvements and new functionalities. Additionally, I created a dedicated panel for advertisers, where company representatives can track the statistics of their ads, including the number of views and clicks during the campaign period. I was also responsible for creating the portal initially as a PWA application and later as a TWA application to make it available on the Google Play Store."
+            },
+            "pokecrew": {
+                "title": "PokeCrew.pl",
+                "subtitle": "Official PokeCrew Website",
+                "introduction": "PokeCrew is the official site of a group of friends who attend university festivals in distinctive costumes. The site serves as a showcase, allowing people to easily share photos taken with the group.",
+                "description": "For this project, I developed a simple yet intuitive Pokémon-themed website that allows users to share group photos. The primary goal was to design a site that captures the essence of the Pokémon world. Key features included optimizing the site's size to enhance its chances of loading quickly during large events, where connectivity is often limited. The site also supports automatic language detection, displaying content in the appropriate language. Additionally, to further optimize its size and performance, I utilized a library to convert the Vue SPA application to SSR (Server-Side Rendering)."
+            }
         },
-        "bargify": {
-            "title": "Bargify",
-            "subtitle": "Price Tracking Application",
-            "description": "Bargify is an application that enables users to track prices and availability of specified products from supported online stores."
+        "game": {
+            "topballer": {
+                "title": "TOP BALLER",
+                "subtitle": "2D Mobile Soccer Game",
+                "introduction": "TOP BALLER is a 2D mobile game with a soccer theme. With simple yet engaging gameplay, the game is perfect for both soccer enthusiasts and mobile gaming fans.",
+                "description": "The objective of the game is to defeat your opponent in a match by controlling your soccer shoe and scoring as many goals as possible. The game offers various gameplay modes: you can challenge artificial intelligence, compete against another person on the same device in local mode, or play against other players in multiplayer mode. Developed using the Unity 3D engine, the source code is written in C#. This project was commissioned by one of my clients, and I was responsible for publishing the game on the Play Store, navigating through all necessary processes such as app configuration and conducting a 14-day closed testing phase with testers from various countries."
+            },
+            "project-aridia": {
+                "title": "Project Aridia",
+                "subtitle": "3D Mobile Tower Defense Game",
+                "introduction": "Project Aridia is a working title for a 3D mobile game that combines narrative elements with the classic real-time strategy mode of tower defense games. The game aims to offer a unique experience by blending storyline with intense and dynamic gameplay.",
+                "description": "The project is in the early stages of development, so concepts and visuals are subject to significant changes as work progresses. The project is actively developed by a two-person team, where I serve as the team leader, responsible for coordinating the work and guiding the project's direction. The game is being created using the Unity 3D engine, and I primarily handle the programming side of the project, writing all the source code. Additionally, I provide support to my collaborator, who focuses on level design, ensuring the proper implementation of new functionalities in the game. The plan is to release the project on the Play Store or Steam platform once it reaches its final version."
+            },
+            "playground": {
+                "title": "PlayGround",
+                "subtitle": "2D Mobile Game with Minigames",
+                "introduction": "PlayGround is a simple 2D mobile game featuring classic minigames such as Brick Breaker and Ping Pong. The game is designed to provide users with easy and enjoyable entertainment in a classic style.",
+                "description": "PlayGround was a project developed as part of a course during my engineering studies. For this project, I created a game using the Unity 3D engine, offering two minigames. Each minigame has different difficulty levels and special game modes that introduce new bonuses, which can either hinder or facilitate gameplay. An essential aspect of the project was the implementation of the device's gyroscope, allowing users to choose whether they want to play by moving the device or by holding down the appropriate part of the screen. This feature makes the game more interactive and tailored to user preferences."
+            }
         },
-        "gymtracker": {
-            "title": "GymTracker",
-            "subtitle": "Workout Application",
-            "description": "GymTracker is an application for tracking workouts and progress in fitness at the gym. It allows users to log training sessions, monitor progress, create workout plans, and more."
-        },
-        "dreamfork": {
-            "title": "DreamFork",
-            "subtitle": "PHP Framework",
-            "description": "DreamFork is a lightweight PHP framework inspired by Laravel, dedicated to creating web applications. This framework was designed with performance and a small footprint in mind."
-        },
-        "krosno24": {
-            "title": "Krosno24.pl",
-            "subtitle": "Local News Portal",
-            "description": "This project was not written by me from scratch, but I took over its maintenance, focusing on its further development, optimization, and expanding its functionality."
+        "other": {
+            "dreamlife": {
+                "title": "DreamLife",
+                "subtitle": "Clothing Online Store - Mockup",
+                "introduction": "DreamLife is a clothing online store, designed as a mockup for a shop specializing in streetwear fashion.",
+                "description": "DreamLife is a project for a clothing online store, created as a mockup in Figma. The mockup consists of 12 views, carefully designed for responsiveness and adherence to mockup creation principles. It includes all the necessary elements to develop a fully functional online store based on its design."
+            },
+            "playground": {
+                "title": "PlayGround",
+                "subtitle": "Website with Classic Games",
+                "introduction": "PlayGround is a website where users can play classic games like Rock Paper Scissors, Tic Tac Toe, and Memory Game.",
+                "description": "PlayGround was developed using Vue with the goal of creating a pleasant design for a site where users can spend time playing classic games. The site offers users the opportunity to relax and enjoy simple games. The design of PlayGround is crafted to be both aesthetic and intuitive, ensuring the best user experience."
+            }
         }
     },
     "contact": {

@@ -1,16 +1,16 @@
 <template>
     <header class="header">
-        <div class="header__container">
+        <div class="header__container responsive-container">
             <nav class="header__nav">
                 <div class="header__links">
                     <router-link to="/">{{ $t('header.home') }}</router-link>
                     <div class="divider"></div>
-                    <router-link to="/showcase">{{ $t('header.showcase') }}</router-link>
+                    <router-link to="/showcase" :class="{ active: isRouterActive('/showcase') }">{{ $t('header.showcase') }}</router-link>
                 </div>
                 <div class="language-picker">
                     <button class="language-picker-button" @click="toggleLanguagePicker" ref="languagePickerButtonRef">
                         <div>
-                            <icon name="globe-solid" />
+                            <icon name="globe" />
                             <span>{{ ucFirst(availableLanguages[currentLanguageIndex].value) }}</span>
                             <svg viewBox="0 0 16 16" class="icon"><polygon points="3,5 8,11 13,5"></polygon></svg>
                         </div>
@@ -34,30 +34,32 @@
 import { ref, onMounted } from 'vue';
 import { vOnClickOutside } from '@vueuse/components';
 import { useI18n } from 'vue-i18n';
+import { useRoute } from 'vue-router';
 
 const i18n = useI18n({ useScope: 'global' });
+const route = useRoute();
 
 const availableLanguages = [
-    {
-        lang: 'en',
-        value: 'english'
-    },
-    {
-        lang: 'pl',
-        value: 'polski'
-    }
+    { lang: 'en', value: 'english' },
+    { lang: 'pl', value: 'polski' }
 ];
 
 const isLanguagePickerEnabled = ref(false);
-
 const currentLanguageIndex = ref(0);
-
 const languagePickerButtonRef = ref(null);
 
 onMounted(() => {
     if (typeof window !== 'undefined') {
-        currentLanguageIndex.value = availableLanguages.findIndex((language) => language.lang == navigator.language);
+        const browserLang = navigator.language.split('-')[0];
+        currentLanguageIndex.value = availableLanguages.findIndex((language) => language.lang === browserLang);
+
+        if (currentLanguageIndex.value === -1) {
+            currentLanguageIndex.value = 0;
+        }
+
         i18n.locale.value = availableLanguages[currentLanguageIndex.value].lang;
+    } else {
+        i18n.locale.value = availableLanguages[0].lang;
     }
 });
 
@@ -79,19 +81,20 @@ const onClickOutsideHandler = [
     },
     { ignore: [languagePickerButtonRef] }
 ];
+
+function isRouterActive(path) {
+    return route.path.startsWith(path);
+}
 </script>
 
 <style lang="scss" scoped>
 .header {
     background: $--color-canvas-variant;
-    height: 80px;
+    height: 100px;
     width: 100%;
 
     &__container {
-        height: 100%;
-        padding: 10px 40px;
-        margin: 0 auto;
-        max-width: 1440px;
+        padding: 20px 40px;
     }
 
     &__nav {
@@ -123,7 +126,6 @@ const onClickOutsideHandler = [
             z-index: 1;
 
             transition: all 0.25s ease-in-out;
-            transition-delay: 0.15s;
 
             &:first-child {
                 padding-left: 20px;
@@ -142,7 +144,6 @@ const onClickOutsideHandler = [
                 top: 50%;
                 transform: translateY(-50%);
                 transition: all 0.25s ease-in-out;
-                transition-delay: 0.15s;
                 width: 100%;
                 z-index: -1;
             }
@@ -167,6 +168,26 @@ const onClickOutsideHandler = [
                 &:last-child::after {
                     left: 0;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header {
+        height: 150px;
+    }
+
+    .header__nav {
+        flex-direction: column-reverse;
+        gap: 15px;
+        justify-content: center;
+
+        .language-picker {
+            width: 100%;
+
+            &-button {
+                width: 100%;
             }
         }
     }
@@ -198,18 +219,6 @@ const onClickOutsideHandler = [
             margin: 0px 5px 0px 10px;
             font-weight: bold;
         }
-
-        @media screen and (max-width: 360px) {
-            width: 100%;
-
-            svg {
-                margin-left: 10px;
-            }
-
-            span {
-                display: none;
-            }
-        }
     }
 
     &-selector {
@@ -236,10 +245,6 @@ const onClickOutsideHandler = [
             transition: all 0.25s ease-in-out;
             width: 100%;
 
-            @media screen and (max-width: 360px) {
-                font-size: 1.2rem;
-            }
-
             &:focus-visible,
             &:hover {
                 background: $--color-canvas-variant-secondary;
@@ -253,10 +258,6 @@ const onClickOutsideHandler = [
                     content: '\2713';
                     color: $--color-canvas;
                     margin-left: auto;
-
-                    @media screen and (max-width: 360px) {
-                        display: none;
-                    }
                 }
             }
         }

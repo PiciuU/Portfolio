@@ -35,3 +35,33 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.responsive-container {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    padding: 40px;
+
+    @media screen and (max-width: 1600px) {
+        max-width: 1200px;
+    }
+
+    @media screen and (max-width: 1350px) {
+        max-width: 1000px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        max-width: 100%;
+    }
+}

@@ -20,7 +20,7 @@
                 slidesPerView: 1,
                 spaceBetween: 20
             },
-            600: {
+            700: {
                 slidesPerView: 2,
                 spaceBetween: 60
             },
@@ -31,27 +31,35 @@
         }"
         class="swiper"
     >
-        <swiper-slide class="swiper__slide" v-for="project in highlightedProjects" :key="project">
+        <swiper-slide class="swiper__slide" v-for="project in dataStore.getHighlightedProjects" :key="project.id">
             <div class="swiper__card" data-swiper-parallax="20" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.75" data-swiper-parallax-duration="1000">
-                <img :src="loadImage(project)" alt="Screenshot showing the project's design" data-swiper-parallax="80" data-swiper-parallax-duration="1000" />
+                <img
+                    :src="loadImage(`${project.category}/${project.slug}`)"
+                    width="330"
+                    height="170"
+                    alt="Screenshot showing the project"
+                    data-swiper-parallax="80"
+                    data-swiper-parallax-duration="1000"
+                    loading="lazy"
+                />
 
-                <h4 data-swiper-parallax="80" data-swiper-parallax-duration="1000">{{ $t(`projects.${project}.title`) }}</h4>
+                <h4 data-swiper-parallax="80" data-swiper-parallax-duration="1000">{{ project.name }}</h4>
 
-                <h5 data-swiper-parallax="80" data-swiper-parallax-duration="1000">{{ $t(`projects.${project}.subtitle`) }}</h5>
+                <h5 data-swiper-parallax="80" data-swiper-parallax-duration="1000">{{ $t(`projects.${project.category}.${project.locale_key}.subtitle`) }}</h5>
 
                 <div class="swiper__card-description" data-swiper-parallax="80" data-swiper-parallax-duration="1250">
-                    <p>{{ $t(`projects.${project}.description`) }}</p>
+                    <p>{{ $t(`projects.${project.category}.${project.locale_key}.introduction`) }}</p>
                 </div>
 
                 <router-link
-                    :to="'/showcase/websites/' + project"
+                    :to="`/showcase/${project.category}/${project.slug}`"
                     :title="$t('projects.check-details')"
                     data-swiper-parallax="80"
                     data-swiper-parallax-opacity="0.2"
                     data-swiper-parallax-duration="1500"
                 >
                     {{ $t('projects.check-details') }}
-                    <icon name="arrow-solid" />
+                    <icon name="arrow" />
                 </router-link>
             </div>
         </swiper-slide>
@@ -59,10 +67,12 @@
 </template>
 
 <script setup>
+import { useDataStore } from '@/stores/DataStore';
 import { register } from 'swiper/element/bundle';
+
 register();
 
-const highlightedProjects = ['dreamspeak', 'admanager', 'bargify', 'gymtracker', 'dreamfork', 'krosno24'];
+const dataStore = useDataStore();
 
 function onSwiperReady(instance) {
     const swiper = instance.detail[0];
@@ -70,16 +80,17 @@ function onSwiperReady(instance) {
 }
 
 const loadImage = (fileset) => {
-    return new URL(import.meta.env.BASE_URL + 'images/projects/' + fileset + '/preview.png', import.meta.url).href;
+    return new URL(import.meta.env.BASE_URL + 'images/projects/' + fileset + '/preview.jpg', import.meta.url).href;
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .swiper {
     &__slide {
         background-color: $--color-canvas-variant-secondary;
         border-radius: 7px;
         cursor: grab;
+        height: auto;
         margin: 10px 0px 50px 0px;
         padding: 15px;
         transition: background-color 2s linear;
@@ -112,7 +123,7 @@ const loadImage = (fileset) => {
 
         img {
             border-radius: 5px;
-            height: 100%;
+            height: auto;
             margin-bottom: 25px;
             width: 100%;
         }
@@ -139,6 +150,7 @@ const loadImage = (fileset) => {
             p {
                 color: $--color-text-inverted-muted-2;
                 display: -webkit-box;
+                line-clamp: 4;
                 overflow: hidden;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 4;

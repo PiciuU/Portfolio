@@ -16,35 +16,88 @@
         "check-details": "Sprawdź szczegóły",
         "information-part-one": "Powyżej przedstawione zostały tylko niektóre z moich realizacji.",
         "information-part-two": "Wszystkie projekty można odnaleźć w sekcji",
-        "dreamspeak": {
-            "title": "Dream-Speak.pl",
-            "subtitle": "Strona dla społeczności",
-            "description": "DreamSpeak to dedykowana strona dla użytkowników korzystających z usług DreamSpeak, pełniąca rolę wizytówki oraz platformy kontaktowej dla użytkowników."
+        "categories": {
+            "websites": "Strony",
+            "games": "Gry",
+            "other": "Inne"
         },
-        "admanager": {
-            "title": "AdManager",
-            "subtitle": "System zarządzania reklamami",
-            "description": "AdManager to kompleksowy system zarządzania reklamami, który umożliwia użytkownikom tworzenie, zarządzanie i monitorowanie kampanii reklamowych. System oferuje funkcje tworzenia i edycji reklam, śledzenia ich efektywności, zarządzania fakturami i wiele więcej."
+        "website": {
+            "dreamspeak": {
+                "title": "Dream-Speak.pl",
+                "subtitle": "Strona dla społeczności",
+                "introduction": "DreamSpeak to dedykowana strona dla użytkowników korzystających z usług DreamSpeak, pełniąca rolę wizytówki oraz platformy kontaktowej dla użytkowników.",
+                "description": "DreamSpeak był moim pierwszym większym projektem, który pozwolił mi zdobyć cenne doświadczenie w pracy z systemem Linux oraz zarządzaniu usługami takimi jak hostingi, serwery VPS i domeny. Dzięki temu moje kompetencje wykraczają poza tworzenie stron internetowych – obejmują również ich prawidłowe wdrażanie, wybór odpowiednich dostawców hostingu i serwerów, a także rejestratorów domen. Jednym z rezultatów tego projektu jest oficjalna strona DreamSpeak, stanowiąca centrum informacji dla wszystkich użytkowników naszych usług. Stworzyłem ją w formie wizytówki, dodając specjalne moduły takie jak DreamDesk, który umożliwia użytkownikom bezpośredni kontakt z administratorami w różnych sprawach oraz dostęp do dokumentacji. Strona wspierała również forum przez długi czas, które z biegiem lat zostało zamknięte. Kluczowym elementem jest także moduł DreamEngine, w którym wykorzystałem bibliotekę pozwalającą na bezpośrednią komunikację komunikatorem głosowym TeamSpeak3 za pomocą strony internetowej. Dzięki temu użytkownicy mogą zarządzać swoimi kontami bez potrzeby bycia aktywnym na komunikatorze. W momencie tworzenia tego modułu, DreamSpeak był jednym z niewielu polskich serwerów TeamSpeak3 oferujących taką funkcjonalność i zapewniał szereg automatyzacji oraz usprawnień dla użytkowników."
+            },
+            "manager": {
+                "title": "AdManager",
+                "subtitle": "System zarządzania reklamami",
+                "introduction": "AdManager to kompleksowy system zarządzania reklamami, który umożliwia użytkownikom tworzenie, zarządzanie i monitorowanie kampanii reklamowych. System oferuje funkcje tworzenia i edycji reklam, śledzenia ich efektywności, zarządzania fakturami i wiele więcej.",
+                "description": "AdManager był projektem realizowanym przez trzyosobowy zespół, napisanym z wykorzystaniem połączenia Vue oraz Laravel. Celem projektu było stworzenie systemu zarządzania reklamami, który mógłby być wykorzystywany przez firmy zewnętrzne. System oferuje wiele funkcjonalności związanych z zarządzaniem reklamami użytkowników. Użytkownicy mogą dodawać nowe kampanie reklamowe, domyślnie opłacając je za wybrany okres emisji. Następnie mogą śledzić statystyki swoich reklam, które są rejestrowane przez firmę korzystającą z systemu. Kluczowym elementem projektu było stworzenie zaawansowanego panelu administracyjnego, wbudowanego w system. Dzięki temu administratorzy mają dostęp do zakładek admina, gdzie mogą zarządzać reklamami oraz użytkownikami, a także wyświetlać dziennik zdarzeń, który zapisuje każdą akcję wykonaną w systemie. W ramach tego projektu byłem liderem zespołu. Odpowiadałem za synchronizację pracy, poprawne łączenie oraz integrowanie aktualizacji, pisanie i poprawianie kodu, a także ocenę jakości kodu. Pełniłem również rolę mentora, wprowadzając pozostałych członków zespołu w świat Vue oraz Laravela, starając się w przystępny sposób przedstawiać im koncepcje działania tych frameworków. Projekt ten pozwolił mi rozwinąć umiejętności miękkie w zakresie współpracy z innymi developerami."
+            },
+            "bargify": {
+                "title": "Bargify",
+                "subtitle": "Aplikacja śledząca ceny",
+                "introduction": "Bargify to aplikacja umożliwiająca śledzenie cen oraz dostępności produktów określonch przez użytkownika z obsługiwanych sklepów internetowych.",
+                "description": "Bargify to aplikacja stworzona z wykorzystaniem Vue dla interfejsu użytkownika oraz frameworka DreamFork dla interfejsu API. Jej głównym celem jest umożliwienie użytkownikom śledzenia cen oraz dostępności produktów z obsługiwanych sklepów internetowych. Aplikacja działa na zasadzie web scrapingu: kiedy użytkownik dodaje produkt do swojej listy, aplikacja próbuje dopasować go do istniejących już w bazie danych, aby zminimalizować redundantne działania. W przypadku braku dopasowania, aplikacja przeprowadza scrapowanie produktu ze sklepu internetowego. Następnie, w regularnych odstępach czasu, aplikacja aktualizuje informacje o produktach. Gdy produkt spełnia warunki ustawione przez użytkownika, takie jak maksymalna cena, użytkownik otrzymuje powiadomienie web push. Użytkownicy mogą łatwo dodawać, edytować i usuwać produkty oraz zarządzać ustawieniami powiadomień, co czyni Bargify niezwykle intuicyjnym narzędziem."
+            },
+            "gymtracker": {
+                "title": "Gymtracker",
+                "subtitle": "Aplikacja treningowa",
+                "introduction": "GymTracker to aplikacja do śledzenia treningów i postępów w fitnessie na siłowni. Umożliwia użytkownikom rejestrowanie sesji treningowych, monitorowanie postępów, tworzenie planów treningowych i wiele więcej.",
+                "description": "GymTracker został stworzony przy wykorzystaniu połączenia Vue oraz Laravel. Celem projektu było stworzenie intuicyjnej aplikacji umożliwiającej rozpisywanie swoich treningów oraz śledzenie postępów. Kluczowym elementem projektu było przygotowanie odpowiedniej struktury danych i jej implementacji, aby ćwiczenia dodawane do aplikacji mogły być współdzielone między użytkownikami. Dzięki temu każdy użytkownik może wzbogacić zasoby aplikacji, dodając swoje ćwiczenia do publicznego katalogu lub do swojego prywatnego. Użytkownicy mogą tworzyć własne plany treningowe na poszczególne dni, śledzić postępy w swoich maksymalnych wynikach, a także korzystać z kalkulatorów do obliczania zapotrzebowania kalorycznego czy BMI. GymTracker zapewnia kompleksowe wsparcie dla osób chcących organizować i monitorować swoje ćwiczenia."
+            },
+            "dreamfork": {
+                "title": "DreamFork",
+                "subtitle": "PHP Framework",
+                "introduction": "Dreamfork to lekki framework dla języka PHP inspirowany Laravelem, dedykowany do tworzenia aplikacji internetowych. Framework ten został stworzony z myślą o wydajności i niewielkim rozmiarze.",
+                "description": "DreamFork to moja próba stworzenia własnego frameworka dla języka PHP, inspirowanego Laravelem, którego najczęściej używam w swoich projektach. Dzięki temu DreamFork zawiera wiele podobieństw do Laravela, co pozwala programistom zaznajomionym z Laravelem na szybkie odnalezienie się w nowym środowisku. DreamFork charakteryzuje się niewielkim rozmiarem i szybkością, idealnie nadaje się do tworzenia prostych aplikacji webowych oraz interfejsów API. Pomimo swojego kompaktowego rozmiaru, DreamFork oferuje szereg przydatnych funkcji niezbędnych do nowoczesnego procesu tworzenia aplikacji. Framework jest wyposażony w bogatą dokumentację, która szczegółowo opisuje każdy aspekt jego działania, a otwarty kod źródłowy umożliwia dostosowanie frameworka do indywidualnych potrzeb programistów. DreamFork był również kluczowym elementem mojej pracy inżynierskiej, co oznacza, że jego rozwój był starannie nadzorowany. Praca nad tym projektem pozwoliła mi zrozumieć, jak tworzyć kompleksowe, skalowalne rozwiązania, które są łatwe do rozwijania i utrzymania."
+            },
+            "krosno24": {
+                "title": "Krosno24.pl",
+                "subtitle": "Portal informacyjny",
+                "introduction": "Krosno24.pl to lokalny portal informacyjny dedykowany mieszkańcom Krosna i okolic. Portal skupia się na dostarczaniu najnowszych wiadomości, ogłoszeń oraz informacji o nadchodzących wydarzeniach, stanowiąc idealne miejsce do śledzenia bieżących wydarzeń i aktywności w regionie.",
+                "description": "Projekt nie został przeze mnie napisany od podstaw, natomiast przejąłem nad nim opiekę, koncentrując się na jego dalszym rozwoju, optymalizacji i rozszerzaniu funkcjonalności. Jako główny, a zarazem jedyny programista, byłem, i wciąż jestem, odpowiedzialny za cały proces rozwoju portalu, który obejmuje pisanie kodu, sprawdzanie jego zabezpieczeń, przeprowadzanie odpowiednich testów oraz wdrażanie. Dokonałem wielu poprawek związanych z wydajnością portalu, zarówno od strony bazy danych poprzez optymalizację struktur i tabel, jak i od strony kodu, wprowadzając liczne aktualizacje i optymalizacje. Wprowadziłem wiele nowych funkcji, takich jak sekcje Alertów, powiadomienia web push, ustawienia konta, a także odświeżone sekcje Dyskusje, Gorąca Linia i wiele innych. Rozwijałem również autorski panel CMS stworzony przez poprzedniego programistę, wprowadzając w nim szereg usprawnień oraz nowych funkcjonalności. Dodatkowo, stworzyłem dedykowany panel dla reklamodawców, w którym przedstawiciele firm mogą śledzić statystyki swoich reklam, w tym liczbę wyświetleń oraz kliknięć w czasie trwania kampanii reklamowej. Zajmowałem się również stworzeniem portalu początkowo w formie aplikacji PWA, a następnie aplikacji TWA, aby móc udostępnić ją w sklepie Google Play."
+            },
+            "pokecrew": {
+                "title": "PokeCrew.pl",
+                "subtitle": "Oficjalna strona PokeCrew",
+                "introduction": "PokeCrew to oficjalna strona grupy znajomych, którzy jeżdżą po juwenaliach w charakterystycznych strojach. Strona pełni rolę wizytówki, umożliwiając osobom łatwe udostępnianie grupie wspólnie zrobionych zdjęć.",
+                "description": "W ramach tego projektu stworzyłem prostą, lecz intuicyjną stronę internetową w tematyce Pokémon, która umożliwia użytkownikom dzielenie się wspólnymi zdjęciami. Głównym celem było stworzenie strony, która jak najlepiej oddaje atmosferę świata Pokémon. Kluczowymi elementami była także optymalizacja strony pod kątem rozmiaru, aby zwiększyć szanse na jej szybkie wczytanie podczas masowych wydarzeń, gdzie często występują problemy z zasięgiem. Strona automatycznie wykrywa język urządzenia, wyświetlając zawartość w odpowiednim języku. Ponadto, w celu dalszej optymalizacji rozmiaru i wydajności, wykorzystałem bibliotekę umożliwiającą przekształcenie aplikacji Vue SPA na SSR (Server-Side Rendering)."
+            }
         },
-        "bargify": {
-            "title": "Bargify",
-            "subtitle": "Aplikacja śledząca ceny",
-            "description": "Bargify to aplikacja umożliwiająca śledzenie cen oraz dostępności produktów określonch przez użytkownika z obsługiwanych sklepów internetowych."
+        "game": {
+            "topballer": {
+                "title": "TOP BALLER",
+                "subtitle": "Mobilna gra piłkarska 2D",
+                "introduction": "TOP BALLER to gra mobilna 2D o tematyce piłki nożnej. Prosta, ale wciągająca rozgrywka sprawia, że gra jest idealna zarówno dla miłośników piłki nożnej, jak i entuzjastów gier mobilnych.",
+                "description": "Celem gry jest pokonanie przeciwnika w meczu poprzez sterowanie swoim butem piłkarskim i strzelenie jak największej ilości goli. Gra oferuje różne tryby rozgrywki: możesz zmierzyć się ze sztuczną inteligencją, rywalizować z drugą osobą na tym samym urządzeniu w trybie lokalnym lub grać z innymi graczami w trybie multiplayer. Gra została stworzona na silniku Unity 3D, a kod źródłowy napisano w języku C#. Projekt został zrealizowany na zlecenie jednego z moich klientów. W ramach projektu byłem odpowiedzialny również za publikację gry w sklepie Play, przechodząc przez wszystkie niezbędne etapy, takie jak konfiguracja aplikacji i przeprowadzenie 14-dniowych testów zamkniętych z udziałem testerów z różnych krajów."
+            },
+            "project-aridia": {
+                "title": "Project Aridia",
+                "subtitle": "Mobilna gra 3D Tower Defense",
+                "introduction": "Project Aridia to robocza nazwa dla mobilnej gry 3D, która łączy elementy fabularne z klasycznym trybem strategicznej gry czasu rzeczywistego typu tower defense. Gra ma na celu zaoferowanie unikalnego doświadczenia poprzez połączenie  fabuły z intensywną i dynamiczną rozgrywką.",
+                "description": "Projekt znajduje się we wczesnej fazie rozwoju, dlatego koncepcje oraz wygląd gry mogą ulegać znaczącym zmianom w miarę postępu prac. Projekt jest realizowany przez dwuosobowy zespół, w którym pełnię rolę lidera. Odpowiadam za synchronizację pracy zespołu oraz kierunek, w jakim zmierza projekt. Gra jest tworzona na silniku Unity 3D, a ja zajmuję się głównie stroną programistyczną, pisząc cały kod źródłowy. Ponadto wspieram mojego współpracownika, który odpowiada za level design, dbając o poprawny proces implementacji kolejnych funkcjonalności w grze. Planowane jest, aby po ukończeniu projektu gra została wydana w sklepie Play lub na platformie Steam."
+            },
+            "playground": {
+                "title": "PlayGround",
+                "subtitle": "Mobilna gra 2D z minigrami",
+                "introduction": "PlayGround to prosta mobilna gra 2D, która zawiera klasyczne minigry takie jak Brick Breaker i Ping Pong. Gra została stworzona z myślą o dostarczeniu użytkownikom łatwej i przyjemnej rozrywki w klasycznym stylu.",
+                "description": "PlayGround był projektem realizowanym w ramach przedmiotu na studiach inżynierskich. W ramach tego projektu stworzyłem grę na silniku Unity 3D, która oferuje dwie minigry. Każda z nich posiada różne poziomy trudności oraz specjalne tryby rozgrywki, które wprowadzają nowe bonusy, mogące zarówno utrudnić, jak i ułatwić grę. Kluczowym elementem projektu była implementacja wykorzystania żyroskopu w urządzeniu, co pozwala użytkownikowi decydować, czy chce grać za pomocą ruchu urządzenia, czy poprzez przytrzymanie odpowiedniej części ekranu. Dzięki temu gra jest bardziej interaktywna i dostosowana do preferencji użytkowników."
+            }
         },
-        "gymtracker": {
-            "title": "Gymtracker",
-            "subtitle": "Aplikacja treningowa",
-            "description": "GymTracker to aplikacja do śledzenia treningów i postępów w fitnessie na siłowni. Umożliwia użytkownikom rejestrowanie sesji treningowych, monitorowanie postępów, tworzenie planów treningowych i wiele więcej."
-        },
-        "dreamfork": {
-            "title": "DreamFork",
-            "subtitle": "PHP Framework",
-            "description": "Dreamfork to lekki framework dla języka PHP inspirowany Laravelem, dedykowany do tworzenia aplikacji internetowych. Framework ten został stworzony z myślą o wydajności i niewielkim rozmiarze."
-        },
-        "krosno24": {
-            "title": "Krosno24.pl",
-            "subtitle": "Portal informacyjny",
-            "description": "Projekt nie został przeze mnie napisany od podstaw, natomiast przejąłem nad nim opiekę, koncentrując się na jego dalszym rozwoju, optymalizacji i rozszerzaniu funkcjonalności."
+        "other": {
+            "dreamlife": {
+                "title": "DreamLife",
+                "subtitle": "Odzieżowy sklep internetowy - Makieta",
+                "introduction": "DreamLife to odzieżowy sklep internetowy, zaprojektowany jako makieta sklepu specjalizującego się w sprzedaży odzieży streetwearowej.",
+                "description": "DreamLife jest projektem odzieżowego sklepu internetowego, który został stworzony jako makieta w Figmie. Makieta składa się z 12 widoków, starannie zaprojektowanych pod kątem responsywności i zgodności z zasadami tworzenia makiet. Zawiera wszystkie niezbędne elementy, które umożliwiają przekształcenie jej w pełnoprawny sklep internetowy."
+            },
+            "playground": {
+                "title": "PlayGround",
+                "subtitle": "Strona z klasycznymi grami",
+                "introduction": "PlayGround to strona na której można zagrać w klasyczne gry pokroju kamień papier nożyce, kółko i krzyżyk, gra pamięciowa.",
+                "description": "PlayGround został napisany w Vue i celem projektu było stworzenie przyjemnego designu strony na której będzie można spędzić czas grając w klasyczne gry. Strona oferuje użytkownikom możliwość odprężenia się i rozrywki poprzez dostęp do prostych gier. Design PlayGround został zaprojektowany z myślą o estetyce i intuicyjności, aby zapewnić jak najlepsze doświadczenie użytkownikom."
+            }
         }
     },
     "contact": {

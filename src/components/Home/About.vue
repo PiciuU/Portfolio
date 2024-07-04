@@ -7,7 +7,7 @@
                 ></path>
             </svg>
         </div>
-        <div class="about__container container">
+        <div class="about__container responsive-container">
             <div class="about__heading">
                 <h3 :data-text="$t('about.title')">{{ $t('about.title') }}</h3>
             </div>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="about__image">
-                    <img src="@/assets/images/illustration.png" alt="Illustration with Vue and Laravel logo" />
+                    <img src="@/assets/images/illustration.png" width="340" height="320" alt="Illustration with Vue and Laravel logo" />
                 </div>
             </div>
         </div>
@@ -53,8 +53,6 @@ function handleMouseOut(e) {
 .about {
     &__container {
         overflow: hidden;
-        padding: 40px;
-        width: 100%;
     }
 
     &__background-wave {
@@ -134,7 +132,7 @@ function handleMouseOut(e) {
         flex-basis: 25%;
 
         img {
-            height: 100%;
+            height: auto;
             width: 100%;
         }
     }

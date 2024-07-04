@@ -1,6 +1,6 @@
 <template>
     <section class="projects">
-        <div class="projects__container container">
+        <div class="projects__container responsive-container">
             <div class="projects__ribbon">{{ $t('projects.title') }}</div>
             <div class="projects__content">
                 <Carousel />
@@ -21,11 +21,6 @@ import Carousel from '@/components/Home/ProjectsCarousel.vue';
 
 <style lang="scss" scoped>
 .projects {
-    &__container {
-        padding: 40px;
-        width: 100%;
-    }
-
     &__ribbon {
         --r: 30px;
 

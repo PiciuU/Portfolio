@@ -1,19 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
-    linkExactActiveClass: 'active',
+    linkActiveClass: 'active',
     routes: [
         {
             path: '/',
-            name: 'home',
-            component: Home
+            name: 'Home',
+            component: () => import(/* webpackChunkName: "group-default" */ '@/views/Home.vue')
         },
         {
-            path: '/showcase',
-            name: 'showcase',
-            component: Home
+            path: '/showcase/:type?/:id?',
+            name: 'Showcase',
+            component: () => import(/* webpackChunkName: "group-default" */ '@/views/Showcase.vue')
         }
     ]
 });

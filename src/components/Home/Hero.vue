@@ -1,11 +1,11 @@
 <template>
     <section class="hero">
-        <div class="hero__container container">
+        <div class="hero__container responsive-container">
             <div class="hero__image">
                 <div class="hero__image-content">
                     <div class="hero__image-wrapper">
                         <div class="hero__image-circle"></div>
-                        <img class="hero__image-img" src="@/assets/images/avatar.png" alt="Profile Picture" />
+                        <img class="hero__image-img" src="@/assets/images/avatar.png" width="340" height="450" loading="lazy" alt="Profile Picture" />
                     </div>
                 </div>
             </div>
@@ -24,10 +24,10 @@
                         <icon name="linkedin" />
                     </a>
                     <a href="mailto:patrykstrzalka00@gmail.com" target="_blank" title="Email">
-                        <icon name="envelope-solid" />
+                        <icon name="envelope" />
                     </a>
-                    <a href="#" target="_blank" title="CV">
-                        <icon name="folder-solid" />
+                    <a href="https://drive.google.com/file/d/1o0cbPFJ0uzuhGUi0TXexFarg-KvX6l17/view?usp=sharing" target="_blank" title="CV">
+                        <icon name="folder" />
                     </a>
                 </div>
             </div>
@@ -45,8 +45,6 @@
         align-items: center;
         display: flex;
         gap: 100px;
-        padding: 40px;
-        width: 100%;
     }
 
     &__image {
@@ -100,6 +98,7 @@
 
         &-img {
             filter: drop-shadow(2px 4px 6px black);
+            height: auto;
             max-width: 100%;
             top: 30px;
             transform: scale(1.1);
