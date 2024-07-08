@@ -26,7 +26,7 @@
                     <a href="mailto:patrykstrzalka00@gmail.com" target="_blank" title="Email">
                         <icon name="envelope" />
                     </a>
-                    <a href="https://drive.google.com/file/d/1o0cbPFJ0uzuhGUi0TXexFarg-KvX6l17/view?usp=sharing" target="_blank" title="CV">
+                    <a href="https://drive.google.com/file/d/1Ei-GCywprFNeDBCe--BlVOBo6QbErjmH/view?usp=sharing" target="_blank" title="CV">
                         <icon name="folder" />
                     </a>
                 </div>

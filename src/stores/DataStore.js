@@ -82,11 +82,11 @@ export const useDataStore = defineStore('dataStore', {
             {
                 id: 8,
                 category: 'game',
-                name: 'TOP BALLER',
-                slug: 'topballer',
+                name: 'BALLER',
+                slug: 'baller',
                 images: 4,
                 gallery_type: 'mobile',
-                locale_key: 'topballer',
+                locale_key: 'baller',
                 live_url: 'https://play.google.com/store/apps/details?id=com.dominikszybiszgamestudio.topballer'
             },
             {
