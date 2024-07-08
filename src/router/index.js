@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHistory(),
     linkActiveClass: 'active',
     routes: [
         {
@@ -13,6 +13,10 @@ const router = createRouter({
             path: '/showcase/:type?/:id?',
             name: 'Showcase',
             component: () => import(/* webpackChunkName: "group-default" */ '@/views/Showcase.vue')
+        },
+        {
+            name: 'Redirect',
+            redirect: { name: 'Home' }
         }
     ]
 });
