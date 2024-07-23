@@ -2,6 +2,15 @@ import { defineStore } from 'pinia';
 
 export const useDataStore = defineStore('dataStore', {
     state: () => ({
+        availableLanguages: [
+            { lang: 'en', name: 'english' },
+            { lang: 'pl', name: 'polski' }
+        ],
+        currentLanguage: { lang: 'en', name: 'english' },
+        cvLinks: {
+            en: 'https://drive.google.com/file/d/1GCN57ckiYWPEOzi3BOg3Wi53B68YSeCS/view?usp=sharing',
+            pl: 'https://drive.google.com/file/d/17trUs6uVkl1U6zEj0JDgXF0fUmcc6Ont/view?usp=sharing'
+        },
         highlightedProjects: ['dreamspeak', 'manager', 'bargify', 'gymtracker', 'dreamfork', 'krosno24'],
         projects: [
             {
@@ -133,6 +142,9 @@ export const useDataStore = defineStore('dataStore', {
         ]
     }),
     getters: {
+        getAvailableLanguages: (state) => state.availableLanguages,
+        getCurrentLanguage: (state) => state.currentLanguage,
+        getCvLink: (state) => state.cvLinks[state.currentLanguage.lang],
         getProjects: (state) => state.projects,
         getProject: (state) => (id) => state.projects.find((project) => project.id == id),
         getHighlightedProjects: (state) => {

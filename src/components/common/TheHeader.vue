@@ -11,15 +11,15 @@
                     <button class="language-picker-button" @click="toggleLanguagePicker" ref="languagePickerButtonRef">
                         <div>
                             <icon name="globe" />
-                            <span>{{ ucFirst(availableLanguages[currentLanguageIndex].value) }}</span>
+                            <span>{{ ucFirst(dataStore.getCurrentLanguage.name) }}</span>
                             <svg viewBox="0 0 16 16" class="icon"><polygon points="3,5 8,11 13,5"></polygon></svg>
                         </div>
                     </button>
                     <Transition name="fade">
                         <ul class="language-picker-selector" v-if="isLanguagePickerEnabled" v-on-click-outside="onClickOutsideHandler">
-                            <li v-for="(language, index) in availableLanguages" :key="index" @click="changeLanguage(index)">
-                                <button :class="{ active: index == currentLanguageIndex }">
-                                    {{ ucFirst(language.value) }}
+                            <li v-for="(language, index) in dataStore.getAvailableLanguages" :key="index" @click="changeLanguage(language)">
+                                <button :class="{ active: language.lang == dataStore.getCurrentLanguage.lang }">
+                                    {{ ucFirst(language.name) }}
                                 </button>
                             </li>
                         </ul>
@@ -35,40 +35,32 @@ import { ref, onMounted } from 'vue';
 import { vOnClickOutside } from '@vueuse/components';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
+import { useDataStore } from '@/stores/DataStore';
 
 const i18n = useI18n({ useScope: 'global' });
 const route = useRoute();
-
-const availableLanguages = [
-    { lang: 'en', value: 'english' },
-    { lang: 'pl', value: 'polski' }
-];
+const dataStore = useDataStore();
 
 const isLanguagePickerEnabled = ref(false);
-const currentLanguageIndex = ref(0);
 const languagePickerButtonRef = ref(null);
 
 onMounted(() => {
     if (typeof window !== 'undefined') {
         const browserLang = navigator.language.split('-')[0];
-        currentLanguageIndex.value = availableLanguages.findIndex((language) => language.lang === browserLang);
-
-        if (currentLanguageIndex.value === -1) {
-            currentLanguageIndex.value = 0;
-        }
-
-        i18n.locale.value = availableLanguages[currentLanguageIndex.value].lang;
+        dataStore.currentLanguage = dataStore.getAvailableLanguages.find((language) => language.lang === browserLang) || dataStore.getAvailableLanguages[0];
     } else {
-        i18n.locale.value = availableLanguages[0].lang;
+        dataStore.currentLanguage = dataStore.getAvailableLanguages[0];
     }
+
+    i18n.locale.value = dataStore.currentLanguage.lang;
 });
 
 const ucFirst = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
-function changeLanguage(index) {
-    currentLanguageIndex.value = index;
+function changeLanguage(language) {
+    dataStore.currentLanguage = language;
+    i18n.locale.value = language.lang;
     toggleLanguagePicker();
-    i18n.locale.value = availableLanguages[currentLanguageIndex.value].lang;
 }
 
 function toggleLanguagePicker() {
