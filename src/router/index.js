@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
     history: createWebHistory(),
-    linkActiveClass: 'active',
     routes: [
         {
             path: '/',
@@ -16,6 +15,7 @@ const router = createRouter({
         },
         {
             name: 'Redirect',
+            path: '/:catchAll(.*)',
             redirect: { name: 'Home' }
         }
     ]

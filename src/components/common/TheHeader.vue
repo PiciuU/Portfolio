@@ -3,9 +3,9 @@
         <div class="header__container responsive-container">
             <nav class="header__nav">
                 <div class="header__links">
-                    <router-link to="/">{{ $t('header.home') }}</router-link>
+                    <router-link to="/" :class="{ active: isRouteActiveByName('Home') }">{{ $t('header.home') }}</router-link>
                     <div class="divider"></div>
-                    <router-link to="/showcase" :class="{ active: isRouterActive('/showcase') }">{{ $t('header.showcase') }}</router-link>
+                    <router-link to="/showcase" :class="{ active: isRouteActiveByName('Showcase') }">{{ $t('header.showcase') }}</router-link>
                 </div>
                 <div class="language-picker">
                     <button class="language-picker-button" @click="toggleLanguagePicker" ref="languagePickerButtonRef">
@@ -74,8 +74,8 @@ const onClickOutsideHandler = [
     { ignore: [languagePickerButtonRef] }
 ];
 
-function isRouterActive(path) {
-    return route.path.startsWith(path);
+function isRouteActiveByName(name) {
+    return route.name === name;
 }
 </script>
 
