@@ -67,9 +67,9 @@
         },
         "game": {
             "baller": {
-                "title": "TOP BALLER",
+                "title": "BALLER",
                 "subtitle": "Mobilna gra piłkarska 2D",
-                "introduction": "TOP BALLER to gra mobilna 2D o tematyce piłki nożnej. Prosta, ale wciągająca rozgrywka sprawia, że gra jest idealna zarówno dla miłośników piłki nożnej, jak i entuzjastów gier mobilnych.",
+                "introduction": "BALLER to gra mobilna 2D o tematyce piłki nożnej. Prosta, ale wciągająca rozgrywka sprawia, że gra jest idealna zarówno dla miłośników piłki nożnej, jak i entuzjastów gier mobilnych.",
                 "description": "Celem gry jest pokonanie przeciwnika w meczu poprzez sterowanie swoim butem piłkarskim i strzelenie jak największej ilości goli. Gra oferuje różne tryby rozgrywki: możesz zmierzyć się ze sztuczną inteligencją, rywalizować z drugą osobą na tym samym urządzeniu w trybie lokalnym lub grać z innymi graczami w trybie multiplayer. Gra została stworzona na silniku Unity 3D, a kod źródłowy napisano w języku C#. Projekt został zrealizowany na zlecenie jednego z moich klientów. W ramach projektu byłem odpowiedzialny również za publikację gry w sklepie Play, przechodząc przez wszystkie niezbędne etapy, takie jak konfiguracja aplikacji i przeprowadzenie 14-dniowych testów zamkniętych z udziałem testerów z różnych krajów."
             },
             "project-aridia": {

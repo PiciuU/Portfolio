@@ -67,9 +67,9 @@
         },
         "game": {
             "baller": {
-                "title": "TOP BALLER",
+                "title": "BALLER",
                 "subtitle": "2D Mobile Soccer Game",
-                "introduction": "TOP BALLER is a 2D mobile game with a soccer theme. With simple yet engaging gameplay, the game is perfect for both soccer enthusiasts and mobile gaming fans.",
+                "introduction": "BALLER is a 2D mobile game with a soccer theme. With simple yet engaging gameplay, the game is perfect for both soccer enthusiasts and mobile gaming fans.",
                 "description": "The objective of the game is to defeat your opponent in a match by controlling your soccer shoe and scoring as many goals as possible. The game offers various gameplay modes: you can challenge artificial intelligence, compete against another person on the same device in local mode, or play against other players in multiplayer mode. Developed using the Unity 3D engine, the source code is written in C#. This project was commissioned by one of my clients, and I was responsible for publishing the game on the Play Store, navigating through all necessary processes such as app configuration and conducting a 14-day closed testing phase with testers from various countries."
             },
             "project-aridia": {
