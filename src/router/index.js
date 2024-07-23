@@ -6,12 +6,12 @@ const router = createRouter({
         {
             path: '/',
             name: 'Home',
-            component: () => import(/* webpackChunkName: "group-default" */ '@/views/Home.vue')
+            component: () => import('@/views/Home.vue')
         },
         {
             path: '/showcase/:type?/:id?',
             name: 'Showcase',
-            component: () => import(/* webpackChunkName: "group-default" */ '@/views/Showcase.vue')
+            component: () => import('@/views/Showcase.vue')
         },
         {
             name: 'Redirect',
